@@ -13,9 +13,7 @@ A minimal React SWC Vite starter template with Prettier plugin integration and b
 
 ```bash
 npx degit iwebexpert/vite-react-swc-ts-vscode app
-
 cd app
-
 git init
 ```
 
@@ -23,6 +21,37 @@ git init
 
 - `npm` and `pnpm` should be installed.
 - `git` should be installed (recommended v2.4.11 or higher)
+
+## Branch pnpm-only
+
+The pnpm-only branch enforces the use of pnpm through the **"preinstall": "npx only-allow pnpm"** script.
+
+### Creating an Application from the pnpm-only branch
+
+Follow these steps to create a new application from the pnpm-only branch:
+
+```bash
+# Create the application using degit with the specified branch
+npx degit iwebexpert/vite-react-swc-ts-vscode#pnpm-only app
+
+cd app
+pnpm install
+git init
+```
+
+## Enabling pnpm with Corepack
+
+Corepack is included by default in recent versions of Node.js. To enable pnpm globally using Corepack:
+
+```bash
+corepack enable
+
+# Ensure pnpm is activated
+corepack prepare pnpm@latest --activate
+
+# Verify pnpm is working
+pnpm --version
+```
 
 ### Available scripts
 
